@@ -72,7 +72,7 @@ export default function PartDetailClient({ part }: { part: PartItem }) {
   const waText = encodeURIComponent(
     `Hello! I want to order/inquire for OEM part ${part.partNumber} (${name}). Price: $${part.priceUSD}.`
   );
-  const waLink = `https://wa.me/994507779988?text=${waText}`;
+  const waLink = `https://wa.me/821048695673?text=${waText}`;
 
   return (
     <div className="container max-w-7xl mx-auto px-4 pt-32 pb-24 space-y-10">

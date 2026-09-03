@@ -60,7 +60,7 @@ export default function RequestForm({ prefill, onSuccess }: RequestFormProps) {
       carYear: prefill?.carYear || undefined,
       quantity: 1,
       name: "",
-      phone: "+994 ",
+      phone: "+82 ",
       email: "",
       details: "",
       urgency: "standard",
@@ -115,7 +115,7 @@ export default function RequestForm({ prefill, onSuccess }: RequestFormProps) {
     const waText = encodeURIComponent(
       `Hello Korea Car Parts AZ! I submitted inquiry #${submittedData.id} for: ${submittedData.partName}. Please check price & shipping.`
     );
-    const waLink = `https://wa.me/994507779988?text=${waText}`;
+    const waLink = `https://wa.me/821048695673?text=${waText}`;
 
     return (
       <div className="text-center py-6 px-4 space-y-6">

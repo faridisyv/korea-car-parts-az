@@ -76,7 +76,7 @@ export default function ContactPage() {
             </p>
             <div className="pt-2">
               <a
-                href="https://wa.me/994507779988"
+                href="https://wa.me/821048695673"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600/20 border border-emerald-500/40 text-emerald-400 text-xs font-bold hover:bg-emerald-600 hover:text-white transition-all"

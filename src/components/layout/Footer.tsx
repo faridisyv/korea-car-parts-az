@@ -142,7 +142,7 @@ export default function Footer() {
               <p className="flex items-center gap-2">
                 <MessageCircle className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                 <a
-                  href="https://wa.me/994507779988"
+                  href="https://wa.me/821048695673"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-emerald-400 hover:underline"

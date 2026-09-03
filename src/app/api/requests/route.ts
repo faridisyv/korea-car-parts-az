@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { inquiryRequestSchema } from "@/lib/validators";
+import { sendInquiryNotifications } from "@/lib/notifications";
 
 export async function POST(req: NextRequest) {
   try {
@@ -23,6 +24,11 @@ export async function POST(req: NextRequest) {
         status: "new",
       },
     });
+
+    // Send instant notifications to Admin (Telegram + Email)
+    sendInquiryNotifications(inquiry).catch((err) =>
+      console.error("Background notification error:", err)
+    );
 
     return NextResponse.json({ success: true, id: inquiry.id }, { status: 201 });
   } catch (err: any) {
