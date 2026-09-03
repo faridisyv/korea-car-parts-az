@@ -1,0 +1,182 @@
+{
+  "nav": {
+    "home": "Əsas Səhifə",
+    "catalog": "Ehtiyat Hissələri Kataloqu",
+    "about": "Haqqımızda",
+    "contact": "Əlaqə",
+    "requestPart": "İstənilən Hissəni Sifariş Et",
+    "admin": "Admin",
+    "adminLogin": "Admin Girişi"
+  },
+  "hero": {
+    "badge": "Cənubi Koreyadan Azərbaycana Birbaşa Orijinal Ehtiyat Hissələri",
+    "titlePrefix": "Orijinal Hyundai və Kia Hissələri Birbaşa",
+    "titleHighlight": "Cənubi Koreyadan",
+    "subtitle": "Seul və İnçon anbarlarından birbaşa Bakıya çatdırılan 100% orijinal Hyundai Mobis və Kia Genuine ehtiyat hissələri. Zəmanətli keyfiyyət və 3-7 gün ərzində sürətli hava çatdırılması.",
+    "searchPlaceholder": "OEM kodunu (məsələn: 28113-C1100) və ya avtomobil modelini daxil edin...",
+    "searchBtn": "Hissəni Axtar",
+    "requestCta": "VIN Kod ilə Sifariş Et",
+    "browseCatalog": "Kataloqa Bax",
+    "stats": {
+      "genuine": "100% Orijinal Mobis",
+      "genuineSub": "Koreya zavodlarından birbaşa",
+      "delivery": "3 - 7 Günə Çatdırılma",
+      "deliverySub": "Bakıya sürətli avia kargo",
+      "partsCount": "50,000+ Hissə Bazası",
+      "partsSub": "Geniş OEM çeşidi",
+      "support": "100% Dəqiq VIN Uyğunluğu",
+      "supportSub": "Səhvsiz seçim zəmanəti"
+    }
+  },
+  "brands": {
+    "title": "Rəsmi OEM Brendləri",
+    "subtitle": "Sertifikatlı Cənubi Koreya avtomobil istehsalçıları ilə birbaşa əməkdaşlıq",
+    "hyundai": "Hyundai Mobis",
+    "kia": "Kia Orijinal Hissələr",
+    "genesis": "Genesis Lüks Hissələr",
+    "allBrands": "Bütün Koreya Brendləri"
+  },
+  "categories": {
+    "title": "Kateqoriyalar üzrə Seçim",
+    "subtitle": "Bütün Hyundai və Kia modelləri üçün yüksək dəqiqlikli detallar",
+    "engine": "Mühərrik və Güc Sistemi",
+    "brakes": "Əyləc Sistemi və Disklər",
+    "suspension": "Asqı və Sükan Sistemi",
+    "electrical": "Elektronika və Sensorlar",
+    "body": "Kuzov Hissələri və İşıqlar",
+    "filters": "Filtrlər və Texniki Qulluq",
+    "transmission": "Sürətlər Qutusu və Mufta"
+  },
+  "catalog": {
+    "title": "Koreya OEM Ehtiyat Hissələri Kataloqu",
+    "subtitle": "Mövcud ehtiyat hissələrini axtarın və ya istənilən xüsusi detal üçün sifariş göndərin",
+    "searchPlaceholder": "Hissə nömrəsi, adı və ya model ilə axtar...",
+    "filterBrand": "Brend",
+    "allBrands": "Bütün Brendlər",
+    "filterCategory": "Kateqoriya",
+    "allCategories": "Bütün Kateqoriyalar",
+    "filterStock": "Mövcudluq",
+    "allStock": "Hamısı",
+    "inBaku": "Bakı Anbarında (24 saat)",
+    "inKorea": "Seul Anbarında (4-7 gün)",
+    "sortBy": "Sıralama",
+    "priceAsc": "Qiymət: Ucuzdan Bahaya",
+    "priceDesc": "Qiymət: Bahadan Ucuza",
+    "newest": "Ən Yenilər",
+    "partNumber": "OEM Kodu",
+    "compatibleModels": "Uyğun Avtomobillər",
+    "price": "Qiymət",
+    "inStock": "Anbarda Var",
+    "preorder": "Koreyadan Sifariş",
+    "requestQuote": "Sifariş / Qiymət Al",
+    "viewDetails": "Ətraflı Bax",
+    "noResults": "Axtarışınıza uyğun heç bir ehtiyat hissəsi tapılmadı.",
+    "resetFilters": "Filtrləri Sıfırla",
+    "partsFound": "hissə mövcuddur"
+  },
+  "partDetail": {
+    "oemNumber": "OEM Hissə Kodu",
+    "manufacturer": "İstehsalçı",
+    "condition": "Vəziyyəti",
+    "conditionValue": "Tam Yeni (Orijinal OEM)",
+    "warranty": "Zəmanət",
+    "warrantyValue": "12 Ay Rəsmi Mobis Zəmanəti",
+    "origin": "İstehsalçı Ölkə",
+    "originValue": "Cənubi Koreya (Seul / İnçon)",
+    "weight": "Çəki",
+    "deliveryEstimate": "Təxmini Çatdırılma Müddəti",
+    "compatibleCars": "Dəqiq Avtomobil Uyğunluğu",
+    "specifications": "Texniki Göstəricilər",
+    "orderThisPart": "Bu Hissəni Sifariş Et",
+    "backToCatalog": "← Kataloqa Qayıt",
+    "fastQuote": "WhatsApp ilə Tez Qiymət Al",
+    "fastQuoteDesc": "Dəqiq uyğunluq üçün avtomobilinizin VIN kodunu bildirin."
+  },
+  "requestModal": {
+    "title": "İstənilən Hyundai / Kia Hissəsini Sifariş Et",
+    "subtitle": "VIN kodunuzu və ya detal haqqında məlumatı daxil edin. Seul komandamız zavod anbarlarını yoxlayaraq 15 dəqiqə ərzində sizə dəqiq qiymət və çatdırılma müddətini təqdim edəcək.",
+    "vinLabel": "17 Simvollu VIN Kod",
+    "vinPlaceholder": "məsələn: KMHD84LF0JU123456",
+    "vinTooltip": "Avtomobilin texniki pasportunda və ya qabaq şüşənin sol alt küncündə qeyd olunub.",
+    "partNumberLabel": "OEM Hissə Nömrəsi (varsa)",
+    "partNumberPlaceholder": "məsələn: 58101-D4A00",
+    "partNameLabel": "Hissənin Adı və ya Təsviri *",
+    "partNamePlaceholder": "məsələn: Qabaq Əyləc Bəndi (Nakladka), Fara, Amortizator",
+    "carModelLabel": "Avtomobilin Markası və Modeli *",
+    "carModelPlaceholder": "məsələn: Hyundai Sonata LF / Kia K5 / Tucson",
+    "carYearLabel": "İli",
+    "quantityLabel": "Miqdar",
+    "urgencyLabel": "Çatdırılma Növü",
+    "standardShipping": "Standart Avia Kargo (5-8 gün - Ən sərfəli)",
+    "expressShipping": "Ekspres Kuryer (3-5 gün - Təcili)",
+    "nameLabel": "Adınız və Soyadınız *",
+    "namePlaceholder": "məsələn: Elvin Məmmədov",
+    "phoneLabel": "Əlaqə Nömrəsi (WhatsApp) *",
+    "phonePlaceholder": "+994 50 123 45 67",
+    "emailLabel": "Email (İstəyə görə)",
+    "emailPlaceholder": "elvin@example.com",
+    "detailsLabel": "Əlavə Qeydlər və İstəklər",
+    "detailsPlaceholder": "Mühərrik həcmini (2.0L, 2.4L, 1.6T), komplektasiyanı və ya xüsusi qeydləri yazın...",
+    "submitButton": "Sifariş Göndər",
+    "submitting": "Sifariş Qəbul Edilir...",
+    "successTitle": "Sifarişiniz Uğurla Qəbul Olundu!",
+    "successMsg": "Məlumatlarınız Koreya logistika mərkəzimizə yönləndirildi. Tezliklə sizinlə əlaqə saxlayıb qiymət təklifini təqdim edəcəyik.",
+    "openWhatsapp": "WhatsApp ilə Dərhal Əlaqə Saxla",
+    "close": "Bağla"
+  },
+  "process": {
+    "title": "Seuldan Bakıya Çatdırılma Necə Baş Verir?",
+    "subtitle": "Vasitəçisiz, birbaşa topdansatış tədarük zənciri",
+    "step1": {
+      "title": "1. VIN Kod və Sifariş",
+      "desc": "Avtomobilinizin VIN kodunu və ya tələb olunan hissəni saytımızdan və ya WhatsApp-dan göndərin."
+    },
+    "step2": {
+      "title": "2. Seul Zavodunda Dəqiqləşdirmə",
+      "desc": "Koreyadakı komandamız Mobis kataloqundan dəqiq nömrəni tapır və ən sərfəli qiyməti hesablayır."
+    },
+    "step3": {
+      "title": "3. Keyfiyyət Yoxlanışı və Paketləmə",
+      "desc": "İnçon anbarında hissələr yoxlanılır və orijinal mühafizə qutusunda təhlükəsiz qablaşdırılır."
+    },
+    "step4": {
+      "title": "4. Bakıya Birbaşa Uçuş",
+      "desc": "Bakıya sürətli təyyarə reysi ilə göndərilir, gömrük rəsmiləşdirilməsi edilir və ünvanınıza çatdırılır."
+    }
+  },
+  "about": {
+    "title": "Korea Car Parts AZ Haqqında",
+    "subtitle": "Koreya avtomobil keyfiyyətini Azərbaycan sürücüləri və ustaları ilə birləşdirən etibarlı tərəfdaş.",
+    "storyHeading": "Bizim Missiyamız",
+    "story1": "Azərbaycan bazarında saxta və şişirdilmiş qiymətə satılan detallara son qoymaq məqsədilə Seul, İnçon və Bakı arasında birbaşa tədarük körpüsü yaratdıq.",
+    "story2": "Bütün detallar birbaşa Hyundai Mobis, Kia Genuine və aparıcı Koreya OEM zavodlarından (Mando, Valeo Korea, Sangsin, CTR, Iljin) rəsmi idxal olunur.",
+    "feature1Title": "100% Orijinal Detallar",
+    "feature1Desc": "Orijinal holoqramlı və zavod barkodlu qutular.",
+    "feature2Title": "Sürətli Avia Çatdırılma",
+    "feature2Desc": "İnçon Beynəlxalq Hava Limanından Heydər Əliyev Beynəlxalq Hava Limanına həftəlik birbaşa kargo uçuşları.",
+    "feature3Title": "Həm Fərdi, Həm Topdan",
+    "feature3Desc": "Həm fərdi avtomobil sahiblərinə, həm də servis və mağazalara xüsusi şərtlərlə təchizat."
+  },
+  "contact": {
+    "title": "Bizimlə Əlaqə",
+    "subtitle": "Bakı və Seul ofislərimiz sizə kömək etməyə hər zaman hazırdır",
+    "bakuTitle": "Bakı Filialı və Paylama Mərkəzi",
+    "bakuAddress": "Babək prospekti 45, Xətai rayonu, Bakı, Azərbaycan",
+    "seoulTitle": "Seul Təchizat və Logistika Ofisi",
+    "seoulAddress": "Gangseo-gu, Magok Jungang-ro, Seul, Cənubi Koreya",
+    "phone": "+994 12 555 88 99",
+    "whatsapp": "+994 50 777 99 88",
+    "email": "info@koreacars.az",
+    "workingHours": "B.e - Şənbə: 09:00 - 19:00",
+    "sendMessage": "Bizə Mesaj Yazın",
+    "sendBtn": "Mesajı Göndər"
+  },
+  "footer": {
+    "description": "Cənubi Koreyadan Azərbaycana orijinal Hyundai Mobis, Kia Genuine və Genesis ehtiyat hissələrinin rəsmi idxal və tədarükçüsü.",
+    "quickLinks": "Faydalı Keçidlər",
+    "brandsTitle": "OEM Brendlər",
+    "contactTitle": "Bakı Ofisi",
+    "copyright": "© 2026 Korea Car Parts AZ. Bütün hüquqlar qorunur. Koreyadan Bakıya birbaşa ixracat.",
+    "tagline": "Orijinal Mobis Korea ehtiyat hissələri birbaşa qapınızda."
+  }
+}

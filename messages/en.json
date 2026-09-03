@@ -1,0 +1,182 @@
+{
+  "nav": {
+    "home": "Home",
+    "catalog": "Parts Catalog",
+    "about": "About Us",
+    "contact": "Contact",
+    "requestPart": "Request Any Part",
+    "admin": "Admin",
+    "adminLogin": "Admin Portal"
+  },
+  "hero": {
+    "badge": "Direct Korean OEM Exporter to Azerbaijan",
+    "titlePrefix": "Genuine Hyundai & Kia Parts Direct From",
+    "titleHighlight": "South Korea",
+    "subtitle": "Original Hyundai Mobis & Kia Genuine auto parts exported straight from Seoul & Incheon warehouses to Baku with guaranteed authenticity and 3-7 day air delivery.",
+    "searchPlaceholder": "Enter OEM Part Number (e.g. 28113-C1100) or Car Model...",
+    "searchBtn": "Search Parts",
+    "requestCta": "Request by VIN Code",
+    "browseCatalog": "Explore Catalog",
+    "stats": {
+      "genuine": "100% Genuine Mobis",
+      "genuineSub": "Direct from Korean factories",
+      "delivery": "3 - 7 Days Delivery",
+      "deliverySub": "Fast Air Freight to Baku",
+      "partsCount": "50,000+ Parts Sourced",
+      "partsSub": "Complete OEM catalog",
+      "support": "VIN Matching 100%",
+      "supportSub": "Zero fitment errors"
+    }
+  },
+  "brands": {
+    "title": "Authorized OEM Brands",
+    "subtitle": "Direct partnerships with certified Korean automotive manufacturers",
+    "hyundai": "Hyundai Mobis",
+    "kia": "Kia Genuine Parts",
+    "genesis": "Genesis Luxury Parts",
+    "allBrands": "All Korean Brands"
+  },
+  "categories": {
+    "title": "Browse By Category",
+    "subtitle": "High-precision components for all Hyundai and Kia generations",
+    "engine": "Engine & Drivetrain",
+    "brakes": "Brake Systems & Discs",
+    "suspension": "Suspension & Steering",
+    "electrical": "Electronics & Sensors",
+    "body": "Body Parts & Lighting",
+    "filters": "Filters & Maintenance",
+    "transmission": "Transmission & Clutch"
+  },
+  "catalog": {
+    "title": "Korea OEM Parts Catalog",
+    "subtitle": "Search through available inventory or submit a request for any custom part",
+    "searchPlaceholder": "Search by part number, name, or model...",
+    "filterBrand": "Brand",
+    "allBrands": "All Brands",
+    "filterCategory": "Category",
+    "allCategories": "All Categories",
+    "filterStock": "Availability",
+    "allStock": "All Availability",
+    "inBaku": "In Baku Warehouse (24h)",
+    "inKorea": "In Seoul Direct (4-7d)",
+    "sortBy": "Sort By",
+    "priceAsc": "Price: Low to High",
+    "priceDesc": "Price: High to Low",
+    "newest": "Newest Arrivals",
+    "partNumber": "OEM Code",
+    "compatibleModels": "Compatible Vehicles",
+    "price": "Price",
+    "inStock": "In Stock",
+    "preorder": "Order From Korea",
+    "requestQuote": "Inquire / Order",
+    "viewDetails": "View Details",
+    "noResults": "No auto parts found matching your criteria.",
+    "resetFilters": "Reset All Filters",
+    "partsFound": "parts available"
+  },
+  "partDetail": {
+    "oemNumber": "OEM Part Number",
+    "manufacturer": "Manufacturer",
+    "condition": "Condition",
+    "conditionValue": "Brand New (Genuine OEM)",
+    "warranty": "Warranty",
+    "warrantyValue": "12 Months Official Mobis Guarantee",
+    "origin": "Country of Origin",
+    "originValue": "South Korea (Seoul / Incheon)",
+    "weight": "Weight",
+    "deliveryEstimate": "Estimated Delivery",
+    "compatibleCars": "Verified Vehicle Fitment",
+    "specifications": "Technical Specifications",
+    "orderThisPart": "Order / Inquire for this Part",
+    "backToCatalog": "← Back to Catalog",
+    "fastQuote": "Get Fast WhatsApp Quote",
+    "fastQuoteDesc": "Have your VIN code ready for 100% fitment verification."
+  },
+  "requestModal": {
+    "title": "Request Any Hyundai / Kia Part",
+    "subtitle": "Fill in your VIN code or part information. Our Seoul team will check factory inventory and provide you with an exact quote & delivery timeline within 15 minutes.",
+    "vinLabel": "17-Character VIN Code",
+    "vinPlaceholder": "e.g. KMHD84LF0JU123456",
+    "vinTooltip": "Found on your vehicle registration certificate (texpasport) or windshield corner.",
+    "partNumberLabel": "OEM Part Number (Optional)",
+    "partNumberPlaceholder": "e.g. 58101-D4A00",
+    "partNameLabel": "Part Name or Description *",
+    "partNamePlaceholder": "e.g. Front Brake Pads Set, LED Headlight, Shock Absorber",
+    "carModelLabel": "Vehicle Make & Model *",
+    "carModelPlaceholder": "e.g. Hyundai Sonata LF / Kia K5 / Tucson",
+    "carYearLabel": "Model Year",
+    "quantityLabel": "Quantity",
+    "urgencyLabel": "Shipping Preference",
+    "standardShipping": "Standard Air Cargo (5-8 days - Best rate)",
+    "expressShipping": "Express Courier (3-5 days - Urgent)",
+    "nameLabel": "Your Name *",
+    "namePlaceholder": "e.g. Elvin Mammadov",
+    "phoneLabel": "Phone Number (WhatsApp) *",
+    "phonePlaceholder": "+994 50 123 45 67",
+    "emailLabel": "Email (Optional)",
+    "emailPlaceholder": "elvin@example.com",
+    "detailsLabel": "Additional Details / Requirements",
+    "detailsPlaceholder": "Specify engine type (2.0L, 2.4L, 1.6T), trim level, or specific requirements...",
+    "submitButton": "Submit Part Request",
+    "submitting": "Processing Request...",
+    "successTitle": "Request Received Successfully!",
+    "successMsg": "Your inquiry has been assigned to our Korean logistics team. We will send you an official price quote with delivery timeline shortly.",
+    "openWhatsapp": "Instant WhatsApp Follow-up",
+    "close": "Close"
+  },
+  "process": {
+    "title": "How We Deliver From Seoul to Baku",
+    "subtitle": "Direct wholesale supply chain with zero middlemen",
+    "step1": {
+      "title": "1. Submit Request or VIN",
+      "desc": "Provide your VIN code or OEM part number through our website or WhatsApp."
+    },
+    "step2": {
+      "title": "2. Seoul Factory Matching",
+      "desc": "Our team verifies the exact Mobis Korea factory part number and gives you the best price."
+    },
+    "step3": {
+      "title": "3. Quality Check & Packing",
+      "desc": "Parts are inspected in Incheon warehouse and packed in OEM security packaging."
+    },
+    "step4": {
+      "title": "4. Direct Flight to Baku",
+      "desc": "Express air shipping directly to Baku with customs clearance and local door delivery."
+    }
+  },
+  "about": {
+    "title": "About Korea Car Parts Direct",
+    "subtitle": "The reliable bridge connecting Korean automotive quality with drivers and workshops in Azerbaijan.",
+    "storyHeading": "Our Mission",
+    "story1": "Founded to solve the issue of counterfeit and overpriced Korean auto parts in Azerbaijan, we established direct logistics channels between Seoul, Incheon and Baku.",
+    "story2": "Every single part in our inventory is sourced directly from Hyundai Mobis, Kia Genuine, and Tier-1 Korean OEM manufacturers (Mando, Valeo Korea, Sangsin, CTR, Iljin).",
+    "feature1Title": "100% Genuine Parts",
+    "feature1Desc": "Original hologram-sealed packaging directly from South Korea.",
+    "feature2Title": "Express Air Freight",
+    "feature2Desc": "Weekly direct cargo flights from Incheon International Airport to Heydar Aliyev International Airport.",
+    "feature3Title": "Wholesale & Retail",
+    "feature3Desc": "We supply individual car owners, repair shops, and commercial auto fleets across Azerbaijan."
+  },
+  "contact": {
+    "title": "Contact Our Team",
+    "subtitle": "Offices in Baku and Seoul ready to assist with any part inquiry",
+    "bakuTitle": "Baku Distribution & Office",
+    "bakuAddress": "Babek Avenue 45, Khatai District, Baku, Azerbaijan",
+    "seoulTitle": "Seoul Logistics & Procurement",
+    "seoulAddress": "Gangseo-gu, Magok Jungang-ro, Seoul, South Korea",
+    "phone": "+994 12 555 88 99",
+    "whatsapp": "+994 50 777 99 88",
+    "email": "info@koreacars.az",
+    "workingHours": "Mon - Sat: 09:00 - 19:00",
+    "sendMessage": "Send Us a Message",
+    "sendBtn": "Send Message"
+  },
+  "footer": {
+    "description": "Leading importer and exporter of genuine Hyundai Mobis, Kia Genuine, and Genesis luxury auto parts from South Korea to Azerbaijan.",
+    "quickLinks": "Quick Links",
+    "brandsTitle": "OEM Brands",
+    "contactTitle": "Baku Office",
+    "copyright": "© 2026 Korea Car Parts AZ. All rights reserved. Direct Korea to Baku Export.",
+    "tagline": "Authentic Mobis Korea parts delivered to your doorstep."
+  }
+}

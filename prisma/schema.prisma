@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Part {
+  id               String   @id @default(cuid())
+  partNumber       String   @unique
+  brand            String   // "Hyundai" | "Kia" | "Genesis"
+  category         String   // "engine" | "brakes" | "suspension" | "electrical" | "body" | "filters" | "transmission"
+  priceUSD         Float
+  priceAZN         Float?
+  inStock          Boolean  @default(true)
+  stockCount       Int      @default(5)
+  location         String   @default("Seoul Direct") // "Baku Warehouse" | "Seoul Direct"
+  deliveryDays     String   @default("4-7 days")
+  images           String   // JSON array of strings
+  compatibleModels String   // e.g. "Hyundai Sonata 2015-2023, Kia K5 2016-2023"
+  oemBrand         String   @default("Hyundai Mobis")
+  weightKg         Float?
+  featured         Boolean  @default(false)
+  translations     String   // JSON: { en: { name: "", desc: "" }, az: { ... }, ru: { ... }, ko: { ... } }
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+model InquiryRequest {
+  id            String   @id @default(cuid())
+  vinCode       String
+  partNumber    String?
+  partName      String?
+  carModel      String?
+  carYear       Int?
+  quantity      Int      @default(1)
+  details       String?
+  name          String
+  phone         String
+  email         String?
+  urgency       String   @default("standard") // "express_air" | "standard"
+  status        String   @default("new")       // "new" | "in_review" | "quoted" | "ordered" | "shipped" | "fulfilled" | "closed"
+  quotePriceUSD Float?
+  adminNotes    String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Category {
+  id           String @id @default(cuid())
+  slug         String @unique
+  icon         String
+  translations String // JSON: { en: { name: "" }, az: { ... }, ru: { ... }, ko: { ... } }
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String   @default("Mobis Korea Admin")
+  password  String   // Hashed with bcrypt
+  role      String   @default("admin")
+  createdAt DateTime @default(now())
+}

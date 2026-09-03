@@ -1,0 +1,182 @@
+{
+  "nav": {
+    "home": "홈",
+    "catalog": "부품 카탈로그",
+    "about": "회사 소개",
+    "contact": "문의하기",
+    "requestPart": "부품 주문/견적 요청",
+    "admin": "관리자",
+    "adminLogin": "관리자 로그인"
+  },
+  "hero": {
+    "badge": "한국 정품 현대·기아 자동차 부품 아제르바이잔 직수출",
+    "titlePrefix": "현대·기아 순정 부품을",
+    "titleHighlight": "한국에서 직송",
+    "subtitle": "서울 및 인천 물류창고에서 바쿠로 직송되는 100% 정품 현대 모비스(Mobis) 및 기아 순정 부품. 완벽한 품질 보증과 3-7일 특급 항공 배송.",
+    "searchPlaceholder": "OEM 순정 부품 번호(예: 28113-C1100) 또는 차종을 입력하세요...",
+    "searchBtn": "부품 검색",
+    "requestCta": "차대번호(VIN)로 견적 요청",
+    "browseCatalog": "카탈로그 보기",
+    "stats": {
+      "genuine": "100% 모비스 정품",
+      "genuineSub": "한국 제조사 직거래",
+      "delivery": "3 - 7일 빠른 배송",
+      "deliverySub": "바쿠 직항 항공 화물",
+      "partsCount": "50,000+ 부품 데이터",
+      "partsSub": "풍부한 OEM 라인업",
+      "support": "차대번호 100% 매칭",
+      "supportSub": "오차 없는 호환성"
+    }
+  },
+  "brands": {
+    "title": "공식 공급 브랜드",
+    "subtitle": "한국 대표 완성차 및 정품 부품 제조사 직결 공급망",
+    "hyundai": "현대 모비스 (Hyundai Mobis)",
+    "kia": "기아 순정 부품 (Kia Genuine)",
+    "genesis": "제네시스 순정 부품 (Genesis)",
+    "allBrands": "전체 한국 브랜드"
+  },
+  "categories": {
+    "title": "카테고리별 검색",
+    "subtitle": "현대 및 기아 전 차종을 위한 고품질 부품",
+    "engine": "엔진 및 구동계",
+    "brakes": "브레이크 및 디스크",
+    "suspension": "서스펜션 및 조향계",
+    "electrical": "전장 및 센서",
+    "body": "외장 및 라이트",
+    "filters": "필터 및 소모품",
+    "transmission": "변속기 및 클러치"
+  },
+  "catalog": {
+    "title": "한국 순정 부품 카탈로그",
+    "subtitle": "보유 재고를 검색하거나 희망하시는 부품을 견적 요청하세요",
+    "searchPlaceholder": "부품 번호, 품명 또는 차종으로 검색...",
+    "filterBrand": "브랜드",
+    "allBrands": "전체 브랜드",
+    "filterCategory": "카테고리",
+    "allCategories": "전체 카테고리",
+    "filterStock": "재고 상태",
+    "allStock": "전체",
+    "inBaku": "바쿠 창고 보유 (24시간)",
+    "inKorea": "한국 직송 (4-7일)",
+    "sortBy": "정렬",
+    "priceAsc": "가격 낮은 순",
+    "priceDesc": "가격 높은 순",
+    "newest": "최신 등록순",
+    "partNumber": "OEM 품번",
+    "compatibleModels": "호환 차종",
+    "price": "가격",
+    "inStock": "재고 있음",
+    "preorder": "한국 주문 가능",
+    "requestQuote": "견적 / 주문 문의",
+    "viewDetails": "상세 보기",
+    "noResults": "검색 조건과 일치하는 부품이 없습니다.",
+    "resetFilters": "필터 초기화",
+    "partsFound": "개 부품 보유"
+  },
+  "partDetail": {
+    "oemNumber": "순정 품번 (OEM No.)",
+    "manufacturer": "제조사",
+    "condition": "상태",
+    "conditionValue": "미사용 신품 (정품 OEM)",
+    "warranty": "보증",
+    "warrantyValue": "12개월 모비스 공식 보증",
+    "origin": "원산지",
+    "originValue": "대한민국 (서울 / 인천)",
+    "weight": "중량",
+    "deliveryEstimate": "예상 배송 기간",
+    "compatibleCars": "적용 가능 차종",
+    "specifications": "상세 스펙",
+    "orderThisPart": "이 부품 주문 / 견적 요청",
+    "backToCatalog": "← 카탈로그로 돌아가기",
+    "fastQuote": "카카오톡/WhatsApp 빠른 견적",
+    "fastQuoteDesc": "차대번호(VIN)를 알려주시면 가장 신속하고 정확하게 확인해 드립니다."
+  },
+  "requestModal": {
+    "title": "현대·기아 전 부품 견적 요청",
+    "subtitle": "차대번호(VIN) 또는 원하시는 부품 정보를 입력해 주세요. 서울 본사에서 즉시 재고 및 최저가 견적을 확인해 드립니다.",
+    "vinLabel": "17자리 차대번호 (VIN Code)",
+    "vinPlaceholder": "예: KMHD84LF0JU123456",
+    "vinTooltip": "자동차 등록증 또는 앞유리 하단에서 확인 가능합니다.",
+    "partNumberLabel": "순정 부품 번호 (알고 계실 경우)",
+    "partNumberPlaceholder": "예: 58101-D4A00",
+    "partNameLabel": "부품명 또는 설명 *",
+    "partNamePlaceholder": "예: 전륜 브레이크 패드 세트, LED 헤드램프, 쇼바",
+    "carModelLabel": "차량 제조사 및 모델 *",
+    "carModelPlaceholder": "예: 현대 쏘나타 LF / 기아 K5 / 투싼",
+    "carYearLabel": "연식",
+    "quantityLabel": "수량",
+    "urgencyLabel": "배송 방법",
+    "standardShipping": "일반 항공 화물 (5-8일 - 경제적)",
+    "expressShipping": "특급 쿠리어 (3-5일 - 긴급)",
+    "nameLabel": "고객명 *",
+    "namePlaceholder": "예: 홍길동 / Elvin Mammadov",
+    "phoneLabel": "연락처 (WhatsApp 가능 번호) *",
+    "phonePlaceholder": "+994 50 123 45 67",
+    "emailLabel": "이메일 (선택)",
+    "emailPlaceholder": "user@example.com",
+    "detailsLabel": "추가 요청사항",
+    "detailsPlaceholder": "엔진 배기량(2.0, 1.6T), 트림 등 세부 정보를 적어주세요...",
+    "submitButton": "견적 요청 제출",
+    "submitting": "요청 처리 중...",
+    "successTitle": "견적 요청이 성공적으로 접수되었습니다!",
+    "successMsg": "한국 물류팀에 배정되었습니다. 확인 후 신속하게 가격 및 배송 일정을 안내해 드리겠습니다.",
+    "openWhatsapp": "WhatsApp으로 즉시 문의하기",
+    "close": "닫기"
+  },
+  "process": {
+    "title": "서울에서 바쿠까지 직송 프로세스",
+    "subtitle": "유통 마진을 최소화한 원스톱 직수출 시스템",
+    "step1": {
+      "title": "1. 부품 또는 VIN 요청",
+      "desc": "차대번호나 필요한 부품 정보를 웹사이트 또는 WhatsApp으로 접수합니다."
+    },
+    "step2": {
+      "title": "2. 서울 본사 정품 확인",
+      "desc": "모비스 정품 카탈로그로 정확한 부품을 매칭하고 견적을 산출합니다."
+    },
+    "step3": {
+      "title": "3. 품질 검수 및 패킹",
+      "desc": "인천 물류센터에서 철저한 검수 후 안전한 정품 포장을 진행합니다."
+    },
+    "step4": {
+      "title": "4. 바쿠 직항 발송",
+      "desc": "바쿠 직항 항공 화물로 신속하게 운송 후 통관 및 고객 배송을 완료합니다."
+    }
+  },
+  "about": {
+    "title": "회사 소개",
+    "subtitle": "한국의 우수한 순정 부품 품질을 아제르바이잔 운전자와 정비업체에 직결합니다.",
+    "storyHeading": "우리의 미션",
+    "story1": "아제르바이잔 현지의 가품 및 과도한 부품 유통 거품을 해소하고자 서울-인천-바쿠 간의 다이렉트 공급망을 구축했습니다.",
+    "story2": "모든 부품은 현대 모비스, 기아 순정 및 1차 OEM 협력사(Mando, CTR, Sangsin, Valeo)에서 직접 공급받습니다.",
+    "feature1Title": "100% 한국 정품",
+    "feature1Desc": "정품 홀로그램 및 바코드가 부착된 순정 신품만을 취급합니다.",
+    "feature2Title": "특급 항공 운송",
+    "feature2Desc": "인천국제공항에서 바쿠 헤이다르 알리예프 국제공항으로 정기 항공 운송.",
+    "feature3Title": "소매 및 도매 공급",
+    "feature3Desc": "개인 차주부터 현지 정비소 및 부품 대리점까지 맞춤 공급."
+  },
+  "contact": {
+    "title": "고객 지원 및 문의",
+    "subtitle": "바쿠 지사 및 서울 본사가 신속히 상담해 드립니다",
+    "bakuTitle": "바쿠 유통 센터 & 사무소",
+    "bakuAddress": "Babek Avenue 45, Khatai District, Baku, Azerbaijan",
+    "seoulTitle": "서울 본사 및 물류팀",
+    "seoulAddress": "서울특별시 강서구 마곡중앙로, 대한민국",
+    "phone": "+994 12 555 88 99",
+    "whatsapp": "+994 50 777 99 88",
+    "email": "info@koreacars.az",
+    "workingHours": "월 - 토: 09:00 - 19:00",
+    "sendMessage": "문의 메시지 보내기",
+    "sendBtn": "메시지 발송"
+  },
+  "footer": {
+    "description": "한국에서 아제르바이잔으로 현대 모비스, 기아 순정, 제네시스 부품을 직수출하는 전문 기업입니다.",
+    "quickLinks": "바로가기",
+    "brandsTitle": "OEM 브랜드",
+    "contactTitle": "바쿠 지사",
+    "copyright": "© 2026 Korea Car Parts AZ. All rights reserved. Direct Korea to Baku Export.",
+    "tagline": "한국 모비스 정품을 가장 안전하고 빠르게 전달합니다."
+  }
+}
