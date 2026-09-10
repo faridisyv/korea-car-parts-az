@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="az" className="dark">
+    <html lang="az">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -28,9 +28,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-[#08090c] text-white min-h-screen flex flex-col font-sans selection:bg-amber-500 selection:text-black">
+      <body className="bg-[#F8F9FB] text-slate-800 min-h-screen flex flex-col font-sans selection:bg-blue-600 selection:text-white">
         {children}
       </body>
     </html>
   );
+
 }

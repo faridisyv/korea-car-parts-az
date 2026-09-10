@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
@@ -7,15 +7,16 @@ import {
   Menu,
   X,
   Sparkles,
-  ShieldCheck,
-  PhoneCall,
-  Search,
+  ShoppingBag,
+  Car,
   ChevronRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LanguageSwitcher from "./LanguageSwitcher";
 import CurrencyToggle from "./CurrencyToggle";
 import { useRequestModal } from "../request/RequestModalContext";
+import { useCart } from "@/components/cart/CartContext";
+import { useGarage } from "@/components/garage/GarageContext";
 
 export default function Header() {
   const t = useTranslations("nav");
@@ -23,6 +24,8 @@ export default function Header() {
   const pathname = usePathname();
   const router = useRouter();
   const { openRequestModal } = useRequestModal();
+  const { totalItems, openCart } = useCart();
+  const { vehicle } = useGarage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -57,36 +60,36 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? "py-3 bg-[#0a0c10]/90 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-black/50"
-          : "py-5 bg-gradient-to-b from-black/80 via-black/40 to-transparent"
+          ? "py-3 bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-sm shadow-slate-200/50"
+          : "py-5 bg-white/80 backdrop-blur-sm border-b border-slate-100"
       }`}
     >
-      <div className="container max-w-7xl mx-auto flex items-center justify-between gap-4">
+      <div className="container max-w-7xl mx-auto px-4 flex items-center justify-between gap-4">
         {/* Brand Logo */}
         <Link
           href="/"
           className="flex items-center gap-3 group shrink-0 focus:outline-none"
         >
-          <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-amber-500 via-amber-400 to-yellow-600 flex items-center justify-center text-black font-black text-xl shadow-lg shadow-amber-500/25 group-hover:scale-105 transition-transform">
+          <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-blue-600/20 group-hover:scale-105 transition-transform">
             K
           </div>
           <div>
             <div className="flex items-center gap-1.5">
-              <span className="font-black text-lg sm:text-xl tracking-tight text-white group-hover:text-amber-400 transition-colors">
-                KOREA<span className="text-amber-400">PARTS</span>
+              <span className="font-black text-lg sm:text-xl tracking-tight text-slate-800 group-hover:text-blue-600 transition-colors">
+                KOREA<span className="text-blue-600">PARTS</span>
               </span>
-              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">
+              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-blue-50 text-blue-600 border border-blue-200">
                 AZ
               </span>
             </div>
-            <p className="text-[10px] font-medium text-zinc-400 uppercase tracking-wider hidden sm:block">
+            <p className="text-[10px] font-medium text-slate-400 uppercase tracking-wider hidden sm:block">
               Hyundai • Kia Mobis Direct
             </p>
           </div>
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-1 bg-white/5 rounded-2xl p-1.5 border border-white/10 backdrop-blur-md">
+        <nav className="hidden lg:flex items-center gap-1 bg-slate-100 rounded-2xl p-1.5">
           {navLinks.map((link) => {
             const isActive =
               link.href === "/"
@@ -98,8 +101,8 @@ export default function Header() {
                 href={link.href}
                 className={`px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all ${
                   isActive
-                    ? "bg-amber-500 text-black shadow-md shadow-amber-500/20"
-                    : "text-zinc-300 hover:text-white hover:bg-white/10"
+                    ? "bg-white text-blue-600 shadow-sm border border-slate-200"
+                    : "text-slate-500 hover:text-slate-800 hover:bg-white/60"
                 }`}
               >
                 {link.label}
@@ -108,7 +111,7 @@ export default function Header() {
           })}
         </nav>
 
-        {/* Right Action Tools & Request CTA */}
+        {/* Right Action Tools */}
         <div className="flex items-center gap-2 sm:gap-3">
           {/* Currency Toggle */}
           <div className="hidden md:block">
@@ -118,21 +121,49 @@ export default function Header() {
           {/* Language Switcher */}
           <LanguageSwitcher />
 
-          {/* Request Part Popup CTA */}
+          {/* My Garage Badge */}
+          {vehicle && (
+            <Link
+              href="/catalog"
+              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-50 border border-blue-200 text-blue-700 hover:bg-blue-100 transition-colors"
+            >
+              <Car className="w-3.5 h-3.5" />
+              <span className="text-xs font-semibold">
+                {vehicle.year} {vehicle.make} {vehicle.model}
+              </span>
+            </Link>
+          )}
+
+          {/* Cart Button */}
+          <button
+            onClick={openCart}
+            id="header-cart-btn"
+            className="relative p-2.5 rounded-xl bg-slate-100 hover:bg-blue-50 border border-transparent hover:border-blue-200 text-slate-500 hover:text-blue-600 transition-all"
+            aria-label="Open Cart"
+          >
+            <ShoppingBag className="w-5 h-5" />
+            {totalItems > 0 && (
+              <span className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-blue-600 text-white text-[10px] font-black flex items-center justify-center shadow-md">
+                {totalItems > 9 ? "9+" : totalItems}
+              </span>
+            )}
+          </button>
+
+          {/* Request Part CTA */}
           <Button
             onClick={() => openRequestModal()}
-            variant="gold"
+            variant="default"
             size="sm"
-            className="hidden sm:inline-flex items-center gap-2 shadow-[0_0_20px_rgba(245,158,11,0.3)] animate-pulseGlow"
+            className="hidden sm:inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-600/20"
           >
-            <Sparkles className="w-4 h-4 text-black" />
+            <Sparkles className="w-4 h-4" />
             <span>{t("requestPart")}</span>
           </Button>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2.5 rounded-xl bg-white/5 border border-white/10 text-zinc-300 hover:text-white"
+            className="lg:hidden p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-500 hover:text-slate-800"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? (
@@ -146,9 +177,9 @@ export default function Header() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[73px] bg-[#0a0c10]/98 border-b border-white/10 backdrop-blur-2xl p-5 shadow-2xl animate-in slide-in-from-top-4 duration-200 z-50">
+        <div className="lg:hidden fixed inset-x-0 top-[73px] bg-white border-b border-slate-200 p-5 shadow-lg animate-in slide-in-from-top-4 duration-200 z-50">
           <div className="space-y-3">
-            <div className="flex items-center justify-between pb-3 border-b border-white/10">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-100">
               <CurrencyToggle />
             </div>
 
@@ -165,29 +196,40 @@ export default function Header() {
                     onClick={() => setMobileMenuOpen(false)}
                     className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-bold uppercase tracking-wider transition-all ${
                       isActive
-                        ? "bg-amber-500 text-black font-extrabold"
-                        : "text-zinc-300 hover:bg-white/5 hover:text-white"
+                        ? "bg-blue-50 text-blue-600 border border-blue-200"
+                        : "text-slate-600 hover:bg-slate-50 hover:text-slate-800"
                     }`}
                   >
                     <span>{link.label}</span>
-                    <ChevronRight className="w-4 h-4 opacity-60" />
+                    <ChevronRight className="w-4 h-4 opacity-40" />
                   </Link>
                 );
               })}
             </nav>
 
-            <div className="pt-2">
+            <div className="pt-2 grid grid-cols-2 gap-2">
               <Button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   openRequestModal();
                 }}
-                variant="gold"
-                className="w-full py-4 text-sm flex items-center justify-center gap-2"
+                className="w-full py-4 text-sm flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white"
               >
                 <Sparkles className="w-4 h-4" />
                 <span>{t("requestPart")}</span>
               </Button>
+              <button
+                onClick={() => { setMobileMenuOpen(false); openCart(); }}
+                className="relative w-full py-4 rounded-xl bg-slate-100 text-slate-700 font-bold text-sm flex items-center justify-center gap-2"
+              >
+                <ShoppingBag className="w-4 h-4" />
+                Cart
+                {totalItems > 0 && (
+                  <span className="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-blue-600 text-white text-[10px] font-black flex items-center justify-center">
+                    {totalItems}
+                  </span>
+                )}
+              </button>
             </div>
           </div>
         </div>

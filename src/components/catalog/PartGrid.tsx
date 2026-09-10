@@ -24,12 +24,12 @@ export default function PartGrid({
         {[1, 2, 3, 4, 5, 6].map((n) => (
           <div
             key={n}
-            className="rounded-2xl glass-panel h-80 animate-pulse flex flex-col p-4 space-y-4"
+            className="rounded-2xl bg-white border border-slate-200 h-80 animate-pulse flex flex-col p-4 space-y-4 shadow-sm"
           >
-            <div className="h-40 bg-white/5 rounded-xl" />
-            <div className="h-4 bg-white/10 rounded w-3/4" />
-            <div className="h-4 bg-white/5 rounded w-1/2" />
-            <div className="h-8 bg-white/10 rounded-xl mt-auto" />
+            <div className="h-40 bg-slate-100 rounded-xl" />
+            <div className="h-4 bg-slate-200 rounded w-3/4" />
+            <div className="h-4 bg-slate-100 rounded w-1/2" />
+            <div className="h-8 bg-slate-100 rounded-xl mt-auto" />
           </div>
         ))}
       </div>
@@ -38,13 +38,13 @@ export default function PartGrid({
 
   if (parts.length === 0) {
     return (
-      <div className="rounded-3xl glass-panel p-12 text-center space-y-4 max-w-lg mx-auto my-12 border border-white/10">
-        <div className="w-16 h-16 bg-amber-500/10 border border-amber-500/30 rounded-full flex items-center justify-center mx-auto text-amber-400">
+      <div className="rounded-3xl bg-white p-12 text-center space-y-4 max-w-lg mx-auto my-12 border border-slate-200/80 shadow-sm">
+        <div className="w-16 h-16 bg-blue-50 border border-blue-200 rounded-full flex items-center justify-center mx-auto text-blue-600">
           <PackageSearch className="w-8 h-8" />
         </div>
         <div className="space-y-1">
-          <h3 className="text-xl font-bold text-white">{t("noResults")}</h3>
-          <p className="text-xs text-zinc-400">
+          <h3 className="text-xl font-bold text-slate-900">{t("noResults")}</h3>
+          <p className="text-xs text-slate-500">
             Can't find the exact part? Request any OEM part number directly using our VIN request popup.
           </p>
         </div>

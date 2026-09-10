@@ -58,28 +58,43 @@ const config: Config = {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
         },
-        // Automotive theme custom colors
-        carbon: {
-          950: "#07080a",
-          900: "#0d0f14",
-          850: "#12151d",
-          800: "#181d27",
-          700: "#242b3a",
-          600: "#343d52",
+        // Soft modern automotive palette
+        slate: {
+          50: "#F8FAFC",
+          100: "#F1F5F9",
+          200: "#E2E8F0",
+          300: "#CBD5E1",
+          400: "#94A3B8",
+          500: "#64748B",
+          600: "#475569",
+          700: "#334155",
+          800: "#1E293B",
+          900: "#0F172A",
         },
-        gold: {
-          400: "#fbbf24",
-          500: "#f59e0b",
-          600: "#d97706",
+        brand: {
+          50: "#EFF6FF",
+          100: "#DBEAFE",
+          200: "#BFDBFE",
+          300: "#93C5FD",
+          400: "#60A5FA",
+          500: "#3B82F6",
+          600: "#2563EB",
+          700: "#1D4ED8",
+        },
+        soft: {
+          bg: "#F8FAFC",
+          card: "#FFFFFF",
+          border: "#E2E8F0",
+          muted: "#F1F5F9",
         },
         korea: {
-          blue: "#003478",
-          red: "#c60c30",
+          blue: "#1E40AF",
+          red: "#DC2626",
         },
         azerbaijan: {
-          blue: "#00b5e2",
-          red: "#ef3340",
-          green: "#509e2f",
+          blue: "#0284C7",
+          red: "#E11D48",
+          green: "#16A34A",
         }
       },
       borderRadius: {

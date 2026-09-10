@@ -44,23 +44,23 @@ export default function LanguageSwitcher() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-semibold tracking-wide transition-all hover:border-amber-500/40"
+        className="flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200/80 border border-slate-200 text-slate-700 text-xs font-semibold tracking-wide transition-all hover:border-blue-300"
         aria-label="Select Language"
       >
         <span className="text-base">{currentLang.flag}</span>
-        <span className="hidden sm:inline font-bold text-zinc-200">
+        <span className="hidden sm:inline font-bold text-slate-700">
           {currentLang.short}
         </span>
         <ChevronDown
-          className={`w-3.5 h-3.5 text-zinc-400 transition-transform duration-200 ${
-            isOpen ? "rotate-180 text-amber-400" : ""
+          className={`w-3.5 h-3.5 text-slate-400 transition-transform duration-200 ${
+            isOpen ? "rotate-180 text-blue-600" : ""
           }`}
         />
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-44 rounded-2xl glass-modal py-2 z-50 shadow-2xl animate-in fade-in zoom-in-95 duration-150">
-          <div className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-amber-400/80 border-b border-white/10 mb-1">
+        <div className="absolute right-0 mt-2 w-44 rounded-2xl bg-white border border-slate-200 py-2 z-50 shadow-xl animate-in fade-in zoom-in-95 duration-150">
+          <div className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-slate-100 mb-1">
             Select Language
           </div>
           {languages.map((lang) => {
@@ -71,8 +71,8 @@ export default function LanguageSwitcher() {
                 onClick={() => handleSelect(lang.code)}
                 className={`w-full flex items-center justify-between px-3.5 py-2 text-xs text-left transition-colors ${
                   isSelected
-                    ? "bg-amber-500/15 text-amber-300 font-bold"
-                    : "text-zinc-300 hover:bg-white/5 hover:text-white"
+                    ? "bg-blue-50 text-blue-700 font-bold"
+                    : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
                 }`}
               >
                 <div className="flex items-center gap-2.5">
@@ -80,7 +80,7 @@ export default function LanguageSwitcher() {
                   <span>{lang.name}</span>
                 </div>
                 {isSelected && (
-                  <Check className="w-3.5 h-3.5 text-amber-400" />
+                  <Check className="w-3.5 h-3.5 text-blue-600" />
                 )}
               </button>
             );

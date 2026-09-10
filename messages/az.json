@@ -178,5 +178,36 @@
     "contactTitle": "Bakı Ofisi",
     "copyright": "© 2026 Korea Car Parts AZ. Bütün hüquqlar qorunur. Koreyadan Bakıya birbaşa ixracat.",
     "tagline": "Orijinal Mobis Korea ehtiyat hissələri birbaşa qapınızda."
+  },
+  "finder": {
+    "byVehicle": "Avtomobil ilə Axtarış",
+    "byOem": "OEM Kod ilə",
+    "byVin": "VIN Kod ilə Dəqiq Seçim",
+    "make": "Marka",
+    "model": "Model",
+    "year": "İl",
+    "findParts": "Uyğun Hissələri Tap",
+    "oemPlaceholder": "OEM kodu daxil edin (məs: 58101-C1A00, 28113-D3000)...",
+    "vinPlaceholder": "17 simvollu VIN kodu daxil edin (məs: KMHD84LF0JU123456)...",
+    "vinGuarantee": "Göndərilmədən öncə mütəxəssislərimiz tərəfindən 100% pulsuz uyğunluq yoxlanışı"
+  },
+  "fitment": {
+    "guaranteed": "Zəmanətli Uyğunluq",
+    "compatibleWith": "Avtomobilinizə tam uyğundur:",
+    "checkFitment": "Avtomobiliniz üçün Uyğunluğu Yoxlayın",
+    "selectCar": "Uyğunluğu dəqiqləşdirmək üçün avtomobili seçin",
+    "freeCheckTitle": "Trodo Standartı ilə 100% Uyğunluq Zəmanəti",
+    "freeCheckDesc": "Əmin deyilsiniz? Sertifikatlı Koreya mütəxəssislərimiz hər sifarişi Seuldan yola salınmazdan əvvəl VIN kod üzrə kataloqdan yoxlayır.",
+    "verifyWithVin": "VIN ilə Yoxla",
+    "expertReview": "Mütəxəssisdən Soruş"
+  },
+  "reviews": {
+    "badge": "Müştəri Məmnuniyyəti",
+    "title": "Azərbaycandakı Sürücü və Servislərin Etibarlı Seçimi",
+    "subtitle": "Bakıda orijinal Mobis və Kia detallarını təhvil almış avtomobil sahiblərinin rəyləri.",
+    "ratingValue": "4.9 / 5.0",
+    "ratingCount": "840-dan çox təsdiqlənmiş çatdırılma",
+    "verified": "Təsdiqlənmiş Alıcı",
+    "baku": "Bakı, Azərbaycan"
   }
 }

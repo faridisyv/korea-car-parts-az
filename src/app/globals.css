@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    --background: 224 71% 4%;
-    --foreground: 210 40% 98%;
+    --background: 214 32% 97%;
+    --foreground: 215 28% 17%;
 
-    --card: 224 71% 6%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
 
-    --popover: 224 71% 5%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
 
-    --primary: 38 92% 50%;
-    --primary-foreground: 222 47% 11%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 215 28% 17%;
 
-    --muted: 217 33% 15%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 214 32% 94%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 38 92% 50%;
-    --accent-foreground: 222 47% 11%;
+    --accent: 221 83% 53%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217 33% 18%;
-    --input: 217 33% 18%;
-    --ring: 38 92% 50%;
+    --border: 214 32% 89%;
+    --input: 214 32% 89%;
+    --ring: 221 83% 53%;
 
     --radius: 0.75rem;
   }
@@ -41,68 +41,93 @@
     @apply border-border;
   }
   body {
-    @apply bg-[#08090c] text-foreground antialiased min-h-screen selection:bg-amber-500 selection:text-black;
+    @apply bg-[#F8F9FB] text-slate-800 antialiased min-h-screen selection:bg-blue-600 selection:text-white;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
-/* Glassmorphism & High-tech Automotive Styling */
+/* Clean Soft Card & Panel Styles (Trodo inspired soft UI) */
 .glass-panel {
-  background: rgba(18, 21, 29, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
 }
 
 .glass-panel-glow {
-  background: rgba(20, 24, 34, 0.85);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(245, 158, 11, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), 0 0 20px rgba(245, 158, 11, 0.1);
+  background: #FFFFFF;
+  border: 1px solid #BFDBFE;
+  box-shadow: 0 4px 20px -2px rgba(37, 99, 235, 0.08), 0 2px 6px -1px rgba(37, 99, 235, 0.04);
 }
 
 .glass-modal {
-  background: rgba(10, 12, 16, 0.88);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(245, 158, 11, 0.3);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75), 0 0 35px rgba(245, 158, 11, 0.15);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
 }
 
 .glass-input {
-  background: rgba(24, 29, 40, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: white;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  color: #0F172A;
   transition: all 0.2s ease;
 }
 
 .glass-input:focus {
-  border-color: #f59e0b;
-  background: rgba(24, 29, 40, 0.9);
-  box-shadow: 0 0 15px rgba(245, 158, 11, 0.25);
+  border-color: #3B82F6;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
   outline: none;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #08090c;
+  background: #F8FAFC;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #242b3a;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #f59e0b;
+  background: #94A3B8;
 }
 
-/* Speed line gradient */
+/* Accent gradient */
 .speed-gradient {
-  background: linear-gradient(90deg, rgba(245, 158, 11, 0) 0%, rgba(245, 158, 11, 0.6) 50%, rgba(245, 158, 11, 0) 100%);
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0) 0%, rgba(37, 99, 235, 0.25) 50%, rgba(37, 99, 235, 0) 100%);
 }
+
+/* Soft section background */
+.section-soft {
+  background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover:hover {
+  box-shadow: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+  transform: translateY(-2px);
+  border-color: #BFDBFE;
+}
+
+/* Cart drawer slide-in */
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+.slide-in-right { animation: slideInRight 0.25s ease; }
+
+@keyframes fadeInUp {
+  from { transform: translateY(16px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+.fade-in-up { animation: fadeInUp 0.3s ease; }
+

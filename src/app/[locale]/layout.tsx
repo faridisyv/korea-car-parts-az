@@ -9,6 +9,9 @@ import Footer from "@/components/layout/Footer";
 import RequestModal from "@/components/request/RequestModal";
 import { RequestModalProvider } from "@/components/request/RequestModalContext";
 import { CurrencyProvider } from "@/components/layout/CurrencyToggle";
+import { GarageProvider } from "@/components/garage/GarageContext";
+import { CartProvider } from "@/components/cart/CartContext";
+import CartDrawer from "@/components/cart/CartDrawer";
 
 export const metadata: Metadata = {
   title: "Korea Car Parts AZ | Genuine Hyundai & Kia Mobis Auto Parts Direct from South Korea",
@@ -34,13 +37,19 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages}>
       <CurrencyProvider>
-        <RequestModalProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <RequestModal />
-        </RequestModalProvider>
+        <GarageProvider>
+          <CartProvider>
+            <RequestModalProvider>
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
+              <RequestModal />
+              <CartDrawer />
+            </RequestModalProvider>
+          </CartProvider>
+        </GarageProvider>
       </CurrencyProvider>
     </NextIntlClientProvider>
   );
 }
+

@@ -2,10 +2,10 @@ export interface InquiryData {
   id: string;
   vinCode: string;
   partNumber?: string | null;
-  partName: string;
+  partName?: string | null;
   carModel?: string | null;
   carYear?: number | null;
-  quantity: number;
+  quantity?: number;
   details?: string | null;
   name: string;
   phone: string;
@@ -46,9 +46,9 @@ async function sendTelegramNotification(inquiry: InquiryData) {
 
 🚗 *Avtomobil:* ${inquiry.carModel || "Bilinmir"} ${inquiry.carYear ? `(${inquiry.carYear})` : ""}
 🔢 *VIN Kod:* \`${inquiry.vinCode}\`
-⚙️ *Hissə Adı:* ${inquiry.partName}
+⚙️ *Hissə Adı:* ${inquiry.partName || "Bilinmir"}
 🏷️ *OEM Kodu:* ${inquiry.partNumber || "Bilinmir"}
-🔢 *Say:* ${inquiry.quantity} ədəd
+🔢 *Say:* ${inquiry.quantity || 1} ədəd
 ⚡ *Təcililik:* ${urgencyLabel}
 ${inquiry.details ? `📝 *Qeyd:* _${inquiry.details}_\n` : ""}
 ⏰ *Tarix:* ${new Date().toLocaleString("az-AZ", { timeZone: "Asia/Baku" })}`;
@@ -119,9 +119,9 @@ async function sendEmailNotification(inquiry: InquiryData) {
         <h3 style="color: #fff; margin-top: 0; font-size: 15px; border-bottom: 1px solid #222; padding-bottom: 8px;">🚗 Avtomobil və Hissə</h3>
         <p style="margin: 6px 0; font-size: 14px;"><strong>Avtomobil:</strong> ${inquiry.carModel || "Bilinmir"} ${inquiry.carYear ? `(${inquiry.carYear})` : ""}</p>
         <p style="margin: 6px 0; font-size: 14px;"><strong>VIN Kod:</strong> <span style="background: #252836; padding: 3px 8px; border-radius: 4px; color: #f59e0b; font-family: monospace; font-size: 15px; letter-spacing: 1px;">${inquiry.vinCode}</span></p>
-        <p style="margin: 6px 0; font-size: 14px;"><strong>Hissə Adı:</strong> ${inquiry.partName}</p>
+        <p style="margin: 6px 0; font-size: 14px;"><strong>Hissə Adı:</strong> ${inquiry.partName || "Bilinmir"}</p>
         ${inquiry.partNumber ? `<p style="margin: 6px 0; font-size: 14px;"><strong>OEM Part #:</strong> ${inquiry.partNumber}</p>` : ""}
-        <p style="margin: 6px 0; font-size: 14px;"><strong>Say:</strong> ${inquiry.quantity} ədəd</p>
+        <p style="margin: 6px 0; font-size: 14px;"><strong>Say:</strong> ${inquiry.quantity || 1} ədəd</p>
         <p style="margin: 6px 0; font-size: 14px;"><strong>Təcililik:</strong> ${urgencyLabel}</p>
         ${inquiry.details ? `<p style="margin: 6px 0; font-size: 14px;"><strong>Əlavə Qeydlər:</strong> ${inquiry.details}</p>` : ""}
       </div>

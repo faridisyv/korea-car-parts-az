@@ -16,20 +16,24 @@ import {
   MessageCircle,
   Truck,
   FileCheck,
-  Layers,
   Scale,
+  ShoppingBag,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCurrency } from "@/components/layout/CurrencyToggle";
 import { useRequestModal } from "@/components/request/RequestModalContext";
+import { useCart } from "@/components/cart/CartContext";
 import { type PartItem } from "@/components/catalog/PartCard";
+import FitmentChecker from "@/components/catalog/FitmentChecker";
 
 export default function PartDetailClient({ part }: { part: PartItem }) {
   const locale = useLocale();
   const t = useTranslations("partDetail");
   const { formatPrice } = useCurrency();
   const { openRequestModal } = useRequestModal();
+  const { addItem } = useCart();
   const [copied, setCopied] = useState(false);
+  const [addedToCart, setAddedToCart] = useState(false);
 
   // Parse JSON translations safely
   let name = part.partNumber;
@@ -68,6 +72,12 @@ export default function PartDetailClient({ part }: { part: PartItem }) {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const handleAddToCart = () => {
+    addItem(part, name);
+    setAddedToCart(true);
+    setTimeout(() => setAddedToCart(false), 2000);
+  };
+
   const isBaku = part.location.toLowerCase().includes("baku");
   const waText = encodeURIComponent(
     `Hello! I want to order/inquire for OEM part ${part.partNumber} (${name}). Price: $${part.priceUSD}.`
@@ -80,7 +90,7 @@ export default function PartDetailClient({ part }: { part: PartItem }) {
       <div>
         <Link
           href="/catalog"
-          className="inline-flex items-center gap-2 text-xs font-bold text-zinc-400 hover:text-amber-400 transition-colors uppercase tracking-wider"
+          className="inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-blue-600 transition-colors uppercase tracking-wider"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>{t("backToCatalog")}</span>
@@ -90,7 +100,7 @@ export default function PartDetailClient({ part }: { part: PartItem }) {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
         {/* Left Col: Image Gallery */}
         <div className="lg:col-span-7 space-y-4">
-          <div className="relative h-96 sm:h-[460px] w-full rounded-3xl overflow-hidden glass-panel border border-white/15 bg-zinc-950 shadow-2xl">
+          <div className="relative h-96 sm:h-[460px] w-full rounded-3xl overflow-hidden bg-white border border-slate-200/80 shadow-md">
             <Image
               src={activeImage}
               alt={name}
@@ -101,23 +111,23 @@ export default function PartDetailClient({ part }: { part: PartItem }) {
             />
             {/* Top badges */}
             <div className="absolute top-4 left-4 flex items-center gap-2">
-              <span className="px-3 py-1 rounded-xl bg-black/80 backdrop-blur-md border border-white/15 text-white font-black text-xs uppercase tracking-wider">
+              <span className="px-3 py-1 rounded-xl bg-slate-900/80 backdrop-blur-md text-white font-black text-xs uppercase tracking-wider shadow-sm">
                 {part.brand}
               </span>
-              <span className="px-3 py-1 rounded-xl bg-amber-500/20 backdrop-blur-md border border-amber-500/40 text-amber-300 font-bold text-xs">
+              <span className="px-3 py-1 rounded-xl bg-blue-50/90 backdrop-blur-md border border-blue-200 text-blue-700 font-bold text-xs shadow-sm">
                 {part.oemBrand}
               </span>
             </div>
 
             <div className="absolute top-4 right-4">
               {isBaku ? (
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-xs font-bold backdrop-blur-md">
-                  <Warehouse className="w-3.5 h-3.5" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-emerald-50/90 border border-emerald-200 text-emerald-700 text-xs font-bold backdrop-blur-md shadow-sm">
+                  <Warehouse className="w-3.5 h-3.5 text-emerald-600" />
                   Baku Stock (24h)
                 </span>
               ) : (
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-sky-500/20 border border-sky-500/40 text-sky-300 text-xs font-bold backdrop-blur-md">
-                  <Plane className="w-3.5 h-3.5" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-blue-50/90 border border-blue-200 text-blue-700 text-xs font-bold backdrop-blur-md shadow-sm">
+                  <Plane className="w-3.5 h-3.5 text-blue-600" />
                   Seoul Direct (4-7d)
                 </span>
               )}
@@ -131,10 +141,10 @@ export default function PartDetailClient({ part }: { part: PartItem }) {
                 <button
                   key={idx}
                   onClick={() => setActiveImage(img)}
-                  className={`relative w-20 h-20 rounded-2xl overflow-hidden glass-panel border transition-all ${
+                  className={`relative w-20 h-20 rounded-2xl overflow-hidden bg-white border transition-all ${
                     activeImage === img
-                      ? "border-amber-500 ring-2 ring-amber-500/40 scale-105"
-                      : "border-white/10 hover:border-white/30 opacity-70 hover:opacity-100"
+                      ? "border-blue-600 ring-2 ring-blue-500/30 scale-105"
+                      : "border-slate-200 hover:border-slate-300 opacity-70 hover:opacity-100"
                   }`}
                 >
                   <Image
@@ -147,6 +157,16 @@ export default function PartDetailClient({ part }: { part: PartItem }) {
               ))}
             </div>
           )}
+
+          {/* Trodo Interactive Fitment Checker */}
+          <div className="pt-2">
+            <FitmentChecker
+              compatibleModels={part.compatibleModels}
+              partNumber={part.partNumber}
+              partName={name}
+              brand={part.brand}
+            />
+          </div>
         </div>
 
         {/* Right Col: Specifications & Order Actions */}
@@ -154,47 +174,47 @@ export default function PartDetailClient({ part }: { part: PartItem }) {
           <div className="space-y-3">
             {/* OEM Part Number Bar */}
             <div className="flex items-center justify-between">
-              <span className="text-xs font-mono text-zinc-400">
+              <span className="text-xs font-mono text-slate-500">
                 {t("oemNumber")}:
               </span>
               <button
                 onClick={handleCopy}
-                className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-mono text-amber-400 font-bold hover:border-amber-500/40 transition-colors"
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-slate-100 hover:bg-blue-50 border border-slate-200 text-xs font-mono text-slate-800 font-bold hover:text-blue-600 hover:border-blue-200 transition-colors"
               >
                 <span>{part.partNumber}</span>
                 {copied ? (
-                  <Check className="w-3.5 h-3.5 text-emerald-400" />
+                  <Check className="w-3.5 h-3.5 text-emerald-600" />
                 ) : (
-                  <Copy className="w-3.5 h-3.5 text-zinc-400" />
+                  <Copy className="w-3.5 h-3.5 text-slate-400" />
                 )}
               </button>
             </div>
 
             {/* Title */}
-            <h1 className="text-2xl sm:text-3xl font-black text-white leading-tight">
+            <h1 className="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">
               {name}
             </h1>
 
             {/* Description */}
             {desc && (
-              <p className="text-sm text-zinc-300 leading-relaxed pt-1">
+              <p className="text-sm text-slate-600 leading-relaxed pt-1">
                 {desc}
               </p>
             )}
           </div>
 
-          {/* Pricing Box */}
-          <div className="rounded-2xl glass-panel p-6 border border-amber-500/30 space-y-4">
+          {/* Pricing & Ordering Card */}
+          <div className="rounded-3xl bg-white p-6 border border-slate-200/80 shadow-sm space-y-4">
             <div className="flex items-baseline justify-between">
               <div>
-                <span className="text-xs text-zinc-400 block">Wholesale Export Price:</span>
-                <span className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                <span className="text-xs text-slate-400 block font-medium">Wholesale Export Price:</span>
+                <span className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
                   {formatPrice(part.priceUSD)}
                 </span>
               </div>
               <div className="text-right">
-                <span className="text-xs text-zinc-400 block">Est. Delivery:</span>
-                <span className="text-sm font-bold text-amber-400">
+                <span className="text-xs text-slate-400 block font-medium">Est. Delivery:</span>
+                <span className="text-sm font-bold text-blue-600">
                   {part.deliveryDays}
                 </span>
               </div>
@@ -202,27 +222,37 @@ export default function PartDetailClient({ part }: { part: PartItem }) {
 
             {/* Action Buttons */}
             <div className="space-y-2.5 pt-2">
-              <Button
-                onClick={() =>
-                  openRequestModal({
-                    partNumber: part.partNumber,
-                    partName: name,
-                    carModel: part.brand,
-                  })
-                }
-                variant="gold"
-                size="lg"
-                className="w-full text-sm font-black uppercase tracking-wider py-4 shadow-xl shadow-amber-500/20"
-              >
-                <Sparkles className="w-4 h-4 mr-2" />
-                {t("orderThisPart")}
-              </Button>
+              <div className="grid grid-cols-2 gap-2">
+                <Button
+                  onClick={() =>
+                    openRequestModal({
+                      partNumber: part.partNumber,
+                      partName: name,
+                      carModel: part.brand,
+                    })
+                  }
+                  variant="default"
+                  size="lg"
+                  className="w-full text-xs font-bold uppercase tracking-wider py-4 bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-500/20"
+                >
+                  <Sparkles className="w-4 h-4 mr-1.5" />
+                  {t("orderThisPart")}
+                </Button>
+
+                <button
+                  onClick={handleAddToCart}
+                  className="w-full flex items-center justify-center gap-1.5 py-3.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-800 font-bold text-xs uppercase tracking-wider transition-colors shadow-sm"
+                >
+                  <ShoppingBag className="w-4 h-4 text-blue-600" />
+                  <span>{addedToCart ? "✓ Added" : "Add to Cart"}</span>
+                </button>
+              </div>
 
               <a
                 href={waLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-emerald-600/20 transition-all hover:scale-[1.01]"
+                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider shadow-md shadow-emerald-600/20 transition-all hover:scale-[1.01]"
               >
                 <MessageCircle className="w-4 h-4" />
                 {t("fastQuote")}
@@ -231,55 +261,55 @@ export default function PartDetailClient({ part }: { part: PartItem }) {
           </div>
 
           {/* Specifications Table */}
-          <div className="rounded-2xl glass-panel p-6 border border-white/10 space-y-4">
-            <h3 className="text-xs font-black uppercase tracking-wider text-white border-l-2 border-amber-500 pl-2">
+          <div className="rounded-3xl bg-white p-6 border border-slate-200/80 shadow-sm space-y-4">
+            <h3 className="text-xs font-black uppercase tracking-wider text-slate-900 border-l-2 border-blue-600 pl-2">
               {t("specifications")}
             </h3>
 
             <div className="space-y-2.5 text-xs">
-              <div className="flex items-center justify-between py-1.5 border-b border-white/5">
-                <span className="text-zinc-400 flex items-center gap-1.5">
-                  <FileCheck className="w-3.5 h-3.5 text-zinc-500" />
+              <div className="flex items-center justify-between py-1.5 border-b border-slate-100">
+                <span className="text-slate-500 flex items-center gap-1.5">
+                  <FileCheck className="w-3.5 h-3.5 text-slate-400" />
                   {t("condition")}
                 </span>
-                <span className="font-bold text-white">{t("conditionValue")}</span>
+                <span className="font-bold text-slate-800">{t("conditionValue")}</span>
               </div>
 
-              <div className="flex items-center justify-between py-1.5 border-b border-white/5">
-                <span className="text-zinc-400 flex items-center gap-1.5">
-                  <ShieldCheck className="w-3.5 h-3.5 text-zinc-500" />
+              <div className="flex items-center justify-between py-1.5 border-b border-slate-100">
+                <span className="text-slate-500 flex items-center gap-1.5">
+                  <ShieldCheck className="w-3.5 h-3.5 text-slate-400" />
                   {t("warranty")}
                 </span>
-                <span className="font-bold text-emerald-400">{t("warrantyValue")}</span>
+                <span className="font-bold text-emerald-600">{t("warrantyValue")}</span>
               </div>
 
-              <div className="flex items-center justify-between py-1.5 border-b border-white/5">
-                <span className="text-zinc-400 flex items-center gap-1.5">
-                  <Plane className="w-3.5 h-3.5 text-zinc-500" />
+              <div className="flex items-center justify-between py-1.5 border-b border-slate-100">
+                <span className="text-slate-500 flex items-center gap-1.5">
+                  <Plane className="w-3.5 h-3.5 text-slate-400" />
                   {t("origin")}
                 </span>
-                <span className="font-bold text-white">{t("originValue")}</span>
+                <span className="font-bold text-slate-800">{t("originValue")}</span>
               </div>
 
               {part.weightKg && (
-                <div className="flex items-center justify-between py-1.5 border-b border-white/5">
-                  <span className="text-zinc-400 flex items-center gap-1.5">
-                    <Scale className="w-3.5 h-3.5 text-zinc-500" />
+                <div className="flex items-center justify-between py-1.5 border-b border-slate-100">
+                  <span className="text-slate-500 flex items-center gap-1.5">
+                    <Scale className="w-3.5 h-3.5 text-slate-400" />
                     {t("weight")}
                   </span>
-                  <span className="font-bold text-white">{part.weightKg} kg</span>
+                  <span className="font-bold text-slate-800">{part.weightKg} kg</span>
                 </div>
               )}
             </div>
           </div>
 
-          {/* Vehicle Compatibility */}
-          <div className="rounded-2xl glass-panel p-6 border border-white/10 space-y-3">
-            <h3 className="text-xs font-black uppercase tracking-wider text-white border-l-2 border-amber-500 pl-2 flex items-center gap-2">
-              <Car className="w-4 h-4 text-amber-400" />
+          {/* Vehicle Compatibility info */}
+          <div className="rounded-3xl bg-white p-6 border border-slate-200/80 shadow-sm space-y-3">
+            <h3 className="text-xs font-black uppercase tracking-wider text-slate-900 border-l-2 border-blue-600 pl-2 flex items-center gap-2">
+              <Car className="w-4 h-4 text-blue-600" />
               {t("compatibleCars")}
             </h3>
-            <p className="text-xs text-zinc-300 leading-relaxed">
+            <p className="text-xs text-slate-600 leading-relaxed">
               {part.compatibleModels}
             </p>
           </div>
@@ -288,3 +318,4 @@ export default function PartDetailClient({ part }: { part: PartItem }) {
     </div>
   );
 }
+

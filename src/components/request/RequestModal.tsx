@@ -36,44 +36,44 @@ export default function RequestModal() {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
-      {/* Semi-transparent Dark Backdrop with deep blur */}
+      {/* Semi-transparent Backdrop with subtle blur */}
       <div
-        className="fixed inset-0 bg-black/75 backdrop-blur-md transition-opacity animate-in fade-in duration-200"
+        className="fixed inset-0 bg-slate-900/50 backdrop-blur-sm transition-opacity animate-in fade-in duration-200"
         onClick={closeRequestModal}
       />
 
-      {/* Glassmorphic Modal Dialog */}
+      {/* Clean Soft Modal Dialog */}
       <div
         role="dialog"
         aria-modal="true"
-        className="relative w-full max-w-2xl max-h-[92vh] flex flex-col rounded-3xl glass-modal overflow-hidden z-10 animate-in zoom-in-95 fade-in duration-200 border border-amber-500/30 shadow-[0_0_50px_rgba(0,0,0,0.8)]"
+        className="relative w-full max-w-2xl max-h-[92vh] flex flex-col rounded-3xl bg-white overflow-hidden z-10 animate-in zoom-in-95 fade-in duration-200 border border-slate-200 shadow-2xl"
       >
-        {/* Top Header Glow Stripe */}
-        <div className="h-1.5 w-full bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-600" />
+        {/* Top Header Soft Stripe */}
+        <div className="h-1.5 w-full bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600" />
 
         {/* Modal Header */}
-        <div className="px-6 pt-5 pb-4 border-b border-white/10 flex items-start justify-between gap-4 bg-zinc-950/40">
+        <div className="px-6 pt-5 pb-4 border-b border-slate-100 flex items-start justify-between gap-4 bg-slate-50/60">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <span className="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 text-[10px] font-extrabold uppercase tracking-wider flex items-center gap-1">
+              <span className="px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-[10px] font-extrabold uppercase tracking-wider flex items-center gap-1">
                 <PlaneTakeoff className="w-3 h-3" />
                 Korea Direct Export
               </span>
-              <span className="px-2 py-0.5 rounded-full bg-white/5 text-zinc-400 border border-white/10 text-[10px] font-mono">
+              <span className="px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 border border-slate-200 text-[10px] font-mono">
                 Mobis OEM
               </span>
             </div>
-            <h2 className="text-xl sm:text-2xl font-black tracking-tight text-white flex items-center gap-2">
+            <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 flex items-center gap-2">
               {t("title")}
             </h2>
-            <p className="text-xs text-zinc-400 leading-relaxed max-w-lg">
+            <p className="text-xs text-slate-500 leading-relaxed max-w-lg">
               {t("subtitle")}
             </p>
           </div>
 
           <button
             onClick={closeRequestModal}
-            className="p-2 rounded-xl text-zinc-400 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors"
+            className="p-2 rounded-xl text-slate-400 hover:text-slate-700 bg-white hover:bg-slate-100 border border-slate-200 transition-colors"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -81,17 +81,17 @@ export default function RequestModal() {
         </div>
 
         {/* Modal Body (Scrollable) */}
-        <div className="p-6 overflow-y-auto max-h-[calc(92vh-140px)]">
+        <div className="p-6 overflow-y-auto max-h-[calc(92vh-140px)] bg-white">
           <RequestForm prefill={prefill} onSuccess={() => {}} />
         </div>
 
         {/* Modal Footer Trust Bar */}
-        <div className="px-6 py-3 bg-zinc-950/80 border-t border-white/10 flex items-center justify-between text-[11px] text-zinc-400">
-          <div className="flex items-center gap-1.5 text-amber-400/90 font-medium">
+        <div className="px-6 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+          <div className="flex items-center gap-1.5 text-blue-600 font-semibold">
             <ShieldCheck className="w-3.5 h-3.5" />
             <span>100% Genuine Parts Guarantee</span>
           </div>
-          <span className="text-zinc-500">Seoul • Incheon • Baku</span>
+          <span className="text-slate-400">Seoul • Incheon • Baku</span>
         </div>
       </div>
     </div>

@@ -1,9 +1,11 @@
 import { prisma } from "@/lib/prisma";
 import HeroSection from "@/components/home/HeroSection";
 import BrandSelector from "@/components/home/BrandSelector";
-import SupplyChainBanner from "@/components/home/SupplyChainBanner";
+import CategoryExplorer from "@/components/home/CategoryExplorer";
 import FeaturedParts from "@/components/home/FeaturedParts";
+import SupplyChainBanner from "@/components/home/SupplyChainBanner";
 import ProcessSection from "@/components/home/ProcessSection";
+import CustomerReviews from "@/components/home/CustomerReviews";
 import { type PartItem } from "@/components/catalog/PartCard";
 
 export const revalidate = 60; // ISR cache revalidation
@@ -36,9 +38,12 @@ export default async function HomePage() {
     <div className="space-y-4">
       <HeroSection />
       <BrandSelector />
+      <CategoryExplorer />
       <FeaturedParts parts={featuredParts} />
       <SupplyChainBanner />
+      <CustomerReviews />
       <ProcessSection />
     </div>
   );
 }
+

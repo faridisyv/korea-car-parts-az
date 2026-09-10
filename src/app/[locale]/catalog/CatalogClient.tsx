@@ -116,18 +116,18 @@ export default function CatalogClient({
   return (
     <div className="container max-w-7xl mx-auto px-4 pt-32 pb-24 space-y-8">
       {/* Header Banner */}
-      <div className="rounded-3xl glass-panel p-8 sm:p-12 border border-white/10 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="rounded-3xl bg-white p-8 sm:p-12 border border-slate-200/80 shadow-sm relative overflow-hidden bg-gradient-to-br from-blue-50/60 via-white to-slate-50">
+        <div className="absolute top-0 right-0 w-80 h-80 bg-blue-100/40 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10 max-w-3xl space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 text-xs font-bold uppercase tracking-wider">
             <PackageCheck className="w-3.5 h-3.5" />
             Direct Factory Inventory
           </div>
-          <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
             {t("title")}
           </h1>
-          <p className="text-sm sm:text-base text-zinc-300 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
             {t("subtitle")}
           </p>
 
@@ -154,18 +154,18 @@ export default function CatalogClient({
           />
 
           {/* Quick Request Box in Sidebar */}
-          <div className="mt-6 rounded-2xl glass-panel p-6 border border-amber-500/20 text-center space-y-3">
-            <h4 className="text-sm font-bold text-white">
+          <div className="mt-6 rounded-2xl bg-white p-6 border border-slate-200/80 shadow-sm text-center space-y-3">
+            <h4 className="text-sm font-bold text-slate-900">
               Looking for another part?
             </h4>
-            <p className="text-xs text-zinc-400 leading-relaxed">
+            <p className="text-xs text-slate-500 leading-relaxed">
               We can source any Mobis part by VIN code within 15 minutes.
             </p>
             <Button
               onClick={() => openRequestModal()}
-              variant="gold"
+              variant="default"
               size="sm"
-              className="w-full text-xs font-bold"
+              className="w-full text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white"
             >
               <Sparkles className="w-3.5 h-3.5 mr-1.5" />
               Request Custom Part
@@ -176,13 +176,13 @@ export default function CatalogClient({
         {/* Right Parts Grid */}
         <div className="lg:col-span-8 xl:col-span-9 space-y-6">
           <div className="flex items-center justify-between px-2">
-            <span className="text-xs font-mono text-zinc-400">
-              Showing <strong className="text-white">{filteredParts.length}</strong> {t("partsFound")}
+            <span className="text-xs font-mono text-slate-500">
+              Showing <strong className="text-slate-900">{filteredParts.length}</strong> {t("partsFound")}
             </span>
             {(selectedBrand || selectedCategory || search || selectedLocation) && (
               <button
                 onClick={handleReset}
-                className="text-xs text-amber-400 hover:underline"
+                className="text-xs text-blue-600 font-medium hover:underline"
               >
                 Clear all filters
               </button>

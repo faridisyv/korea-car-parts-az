@@ -1,6 +1,5 @@
-"use client";
+﻿"use client";
 
-import { useTranslations } from "next-intl";
 import {
   FileSearch,
   Cpu,
@@ -8,6 +7,7 @@ import {
   PlaneTakeoff,
   Sparkles,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function ProcessSection() {
   const t = useTranslations("process");
@@ -18,43 +18,51 @@ export default function ProcessSection() {
       icon: FileSearch,
       title: t("step1.title"),
       desc: t("step1.desc"),
-      color: "border-amber-500/40 text-amber-400 bg-amber-500/10",
+      iconBg: "bg-blue-50",
+      iconColor: "text-blue-600",
+      border: "border-blue-200",
     },
     {
       num: "02",
       icon: Cpu,
       title: t("step2.title"),
       desc: t("step2.desc"),
-      color: "border-sky-500/40 text-sky-400 bg-sky-500/10",
+      iconBg: "bg-sky-50",
+      iconColor: "text-sky-600",
+      border: "border-sky-200",
     },
     {
       num: "03",
       icon: PackageCheck,
       title: t("step3.title"),
       desc: t("step3.desc"),
-      color: "border-purple-500/40 text-purple-400 bg-purple-500/10",
+      iconBg: "bg-purple-50",
+      iconColor: "text-purple-600",
+      border: "border-purple-200",
     },
     {
       num: "04",
       icon: PlaneTakeoff,
       title: t("step4.title"),
       desc: t("step4.desc"),
-      color: "border-emerald-500/40 text-emerald-400 bg-emerald-500/10",
+      iconBg: "bg-emerald-50",
+      iconColor: "text-emerald-600",
+      border: "border-emerald-200",
     },
   ];
 
   return (
-    <section className="py-20 relative bg-zinc-950/40 border-y border-white/5">
+    <section className="py-20 relative bg-slate-50 border-y border-slate-100">
       <div className="container max-w-7xl mx-auto px-4 space-y-12">
         <div className="text-center space-y-2 max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-600 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             Seamless Fulfillment
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-black text-slate-800 tracking-tight">
             {t("title")}
           </h2>
-          <p className="text-sm text-zinc-400 leading-relaxed">
+          <p className="text-sm text-slate-500 leading-relaxed">
             {t("subtitle")}
           </p>
         </div>
@@ -65,30 +73,30 @@ export default function ProcessSection() {
             return (
               <div
                 key={step.num}
-                className="relative rounded-3xl glass-panel p-6 border border-white/10 hover:border-amber-500/40 transition-all duration-300 flex flex-col justify-between space-y-4 hover:-translate-y-1"
+                className={`relative rounded-3xl bg-white border ${step.border} p-6 hover:shadow-lg transition-all duration-300 flex flex-col justify-between space-y-4 hover:-translate-y-1`}
               >
                 <div className="flex items-center justify-between">
                   <div
-                    className={`w-12 h-12 rounded-2xl border flex items-center justify-center ${step.color}`}
+                    className={`w-12 h-12 rounded-2xl flex items-center justify-center ${step.iconBg} ${step.iconColor}`}
                   >
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className="text-2xl font-black text-zinc-600">
+                  <span className="text-2xl font-black text-slate-200">
                     {step.num}
                   </span>
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="text-lg font-bold text-white leading-snug">
+                  <h3 className="text-lg font-bold text-slate-800 leading-snug">
                     {step.title}
                   </h3>
-                  <p className="text-xs text-zinc-400 leading-relaxed">
+                  <p className="text-xs text-slate-500 leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
 
                 {idx < 3 && (
-                  <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-20 text-zinc-600 font-bold text-sm">
+                  <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-20 text-slate-300 font-bold text-sm">
                     →
                   </div>
                 )}

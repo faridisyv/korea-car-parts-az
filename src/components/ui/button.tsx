@@ -8,21 +8,29 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-amber-500 text-black hover:bg-amber-400 shadow-lg shadow-amber-500/20 font-bold",
+          "bg-blue-600 text-white hover:bg-blue-700 shadow-sm shadow-blue-500/20 font-bold",
+        primary:
+          "bg-blue-600 text-white hover:bg-blue-700 shadow-sm shadow-blue-500/20 font-bold",
         gold:
-          "bg-gradient-to-r from-amber-500 via-amber-400 to-yellow-500 text-black hover:brightness-110 shadow-lg shadow-amber-500/25 font-extrabold uppercase tracking-wide",
+          "bg-blue-600 text-white hover:bg-blue-700 shadow-sm shadow-blue-500/20 font-bold",
+        emerald:
+          "bg-emerald-600 text-white hover:bg-emerald-700 shadow-sm shadow-emerald-500/20 font-bold",
+        soft:
+          "bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200/80 font-bold",
+        softEmerald:
+          "bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200/80 font-bold",
         destructive:
-          "bg-red-500/90 text-white hover:bg-red-600 shadow-md shadow-red-500/20",
+          "bg-red-600 text-white hover:bg-red-700 shadow-sm shadow-red-500/20",
         outline:
-          "border border-white/15 bg-white/5 hover:bg-white/10 hover:border-amber-500/50 text-white",
+          "border border-slate-200 bg-white hover:bg-slate-50 hover:border-slate-300 text-slate-700 shadow-sm",
         secondary:
-          "bg-zinc-800 text-zinc-100 hover:bg-zinc-700 border border-zinc-700",
+          "bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200/70",
         ghost:
-          "hover:bg-white/10 text-zinc-300 hover:text-white",
+          "hover:bg-slate-100 text-slate-600 hover:text-slate-900",
         link:
-          "text-amber-400 underline-offset-4 hover:underline",
+          "text-blue-600 underline-offset-4 hover:underline",
         glass:
-          "glass-panel hover:border-amber-500/60 text-white hover:shadow-[0_0_20px_rgba(245,158,11,0.2)]",
+          "bg-white border border-slate-200 text-slate-700 hover:border-blue-300 hover:bg-blue-50/50 shadow-sm",
       },
       size: {
         default: "h-11 px-5 py-2",

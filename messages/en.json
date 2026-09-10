@@ -178,5 +178,36 @@
     "contactTitle": "Baku Office",
     "copyright": "© 2026 Korea Car Parts AZ. All rights reserved. Direct Korea to Baku Export.",
     "tagline": "Authentic Mobis Korea parts delivered to your doorstep."
+  },
+  "finder": {
+    "byVehicle": "Select Vehicle",
+    "byOem": "OEM Part Number",
+    "byVin": "VIN Code Match",
+    "make": "Make",
+    "model": "Model",
+    "year": "Year",
+    "findParts": "Find Compatible Parts",
+    "oemPlaceholder": "Enter OEM number (e.g. 58101-C1A00, 28113-D3000)...",
+    "vinPlaceholder": "Enter 17-digit VIN (e.g. KMHD84LF0JU123456)...",
+    "vinGuarantee": "Free 100% Fitment Verification by our technicians before shipping"
+  },
+  "fitment": {
+    "guaranteed": "Guaranteed to Fit",
+    "compatibleWith": "Compatible with your",
+    "checkFitment": "Check Fitment for Your Car",
+    "selectCar": "Select your vehicle to confirm fitment",
+    "freeCheckTitle": "100% Fitment Guarantee by Trodo Standards",
+    "freeCheckDesc": "Not sure? Our certified Korean parts specialists verify every order against your chassis / VIN code before departure from Seoul.",
+    "verifyWithVin": "Verify with VIN",
+    "expertReview": "Ask an Expert"
+  },
+  "reviews": {
+    "badge": "Verified Customer Satisfaction",
+    "title": "Trusted by Drivers & Workshops across Azerbaijan",
+    "subtitle": "Real experiences from Hyundai, Kia & Genesis owners receiving original Mobis parts in Baku.",
+    "ratingValue": "4.9 / 5.0",
+    "ratingCount": "from 840+ verified deliveries",
+    "verified": "Verified Buyer",
+    "baku": "Baku, Azerbaijan"
   }
 }

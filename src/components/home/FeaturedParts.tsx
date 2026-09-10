@@ -10,18 +10,18 @@ export default function FeaturedParts({ parts }: { parts: PartItem[] }) {
   const t = useTranslations("catalog");
 
   return (
-    <section className="py-16 relative">
+    <section className="py-16 relative bg-[#F8FAFC]">
       <div className="container max-w-7xl mx-auto px-4 space-y-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 text-xs font-bold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />
               High Demand Korean OEM Stock
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
               Popular Genuine Hyundai & Kia Parts
             </h2>
-            <p className="text-sm text-zinc-400">
+            <p className="text-sm text-slate-500">
               Verified Mobis factory parts ready in Baku warehouse or available via Seoul express flight.
             </p>
           </div>
@@ -29,7 +29,7 @@ export default function FeaturedParts({ parts }: { parts: PartItem[] }) {
           <Link href="/catalog">
             <Button
               variant="outline"
-              className="border-white/20 hover:border-amber-500 text-xs uppercase font-bold tracking-wider"
+              className="text-xs uppercase font-bold tracking-wider hover:border-blue-400 hover:text-blue-600"
             >
               <span>View Full Catalog</span>
               <ArrowRight className="w-4 h-4 ml-2" />
